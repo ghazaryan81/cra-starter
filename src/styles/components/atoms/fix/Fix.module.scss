@@ -1,0 +1,25 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+@use "./vars";
+
+@mixin fix {
+ .fix {
+  @include mx(auto);
+  width: 100%;
+  max-width: var(--fix--max-width);
+  padding-right: var(--fix--padding-right);
+  padding-left: var(--fix--padding-left);
+ }
+}
+
+@include fix;

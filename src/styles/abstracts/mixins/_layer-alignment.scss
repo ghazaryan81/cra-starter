@@ -1,0 +1,18 @@
+@mixin layer-center-y($type: absolute, $top: 50%) {
+ position: $type;
+ top: $top;
+ transform: translateY(-50%);
+}
+
+@mixin layer-center-x($type: absolute, $left: 50%) {
+ position: $type;
+ left: $left;
+ transform: translateX(-50%);
+}
+
+@mixin layer-center($type: absolute, $top: 50%, $left: 50%) {
+ position: $type;
+ top: $top;
+ left: $left;
+ transform: translate(-50%, -50%);
+}

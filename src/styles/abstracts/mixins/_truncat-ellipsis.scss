@@ -1,0 +1,14 @@
+@mixin truncat($line) {
+ white-space: normal;
+ text-overflow: ellipsis;
+ display: box !important;
+ overflow: hidden;
+ -webkit-line-clamp: $line;
+ -webkit-box-orient: vertical;
+}
+
+@mixin ellipsis {
+ white-space: nowrap;
+ text-overflow: ellipsis;
+ overflow: hidden;
+}

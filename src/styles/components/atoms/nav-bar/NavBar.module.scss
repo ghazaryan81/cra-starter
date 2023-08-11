@@ -1,0 +1,145 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+@use "./vars" as *;
+
+@mixin nav-bar {
+ .nav-bar {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  background: rgba(var(--color--blue-100--clean), 0.25);
+
+  &__row {
+   text-decoration: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+
+  &__col {
+   text-decoration: none;
+
+   &--1 {
+    text-decoration: none;
+   }
+
+   &--2 {
+    text-decoration: none;
+   }
+  }
+ }
+}
+
+.main-nav {
+ text-decoration: none;
+}
+
+.links {
+ display: flex;
+ list-style: none;
+
+ &__li {
+  margin-right: 1.7rem;
+  padding-right: 1.7rem;
+ }
+
+ &__a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  min-height: clamp(calc(7.8rem * var(--global--resize-ratio)), vw(7.8rem), 7.8rem);
+ }
+}
+
+.soc-links {
+ display: flex;
+ align-items: center;
+ gap: 2.4rem;
+ margin-right: 5rem;
+}
+
+.soc-link {
+ color: var(--color--white-100);
+ display: flex;
+ transition: linear color 0.16s;
+ will-change: color;
+
+ &:hover {
+  color: var(--color--yellow-600);
+ }
+
+ &__svg {
+  aspect-ratio: 1 /1;
+ }
+}
+
+.btn {
+ @include p;
+
+ &:before,
+ &:after {
+  @include p("abs");
+  @include wh(100%);
+  z-index: 1;
+  display: block;
+  content: "";
+  transition: linear opacity 0.16s;
+  will-change: opacity;
+ }
+
+ &:before {
+  z-index: 1;
+  opacity: 1;
+ }
+
+ &:after {
+  z-index: 2;
+  opacity: 0;
+ }
+
+ &__label {
+  @include p;
+  z-index: 10;
+ }
+
+ &--white {
+  @include p;
+  font-family: var(--font-family-root);
+  font-size: var(--font-size--160);
+  font-weight: var(--font-weight--600);
+  line-height: var(--line-height--135);
+  color: var(--color--black-500);
+  text-decoration: none;
+  padding: 2.8rem 5.2rem;
+
+  &:hover {
+   &:after {
+    opacity: 1;
+   }
+  }
+
+  &:before {
+   background: var(--color--white-100);
+  }
+
+  &:after {
+   background: var(--color--yellow-600);
+  }
+ }
+}
+
+@include nav-bar;
+
+.presentation-section {
+ min-height: 797px;
+}

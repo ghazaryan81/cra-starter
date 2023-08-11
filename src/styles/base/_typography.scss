@@ -1,0 +1,37 @@
+@use "@/styles/vendors/font-face-generator" as *;
+
+$fonts-path: "../../fonts/";
+
+$font-file-types: "woff2" "woff";
+
+@include font-face(
+ (
+  "Krub": (
+   400: "Krub-Regular",
+   500: "Krub-Medium",
+   550: "Krub-MediumItalic",
+   600: "Krub-SemiBold",
+  ),
+ )
+);
+
+@include font-face(
+ (
+  "Rubik": (
+   400: "Rubik-Regular",
+   450: "Rubik-Italic",
+   500: "Rubik-Medium",
+   550: "Rubik-MediumItalic",
+   600: "Rubik-SemiBold",
+   700: "Rubik-Bold",
+  ),
+ )
+);
+
+@include font-face(
+ (
+  "LeagueSpartan": (
+   400: "LeagueSpartan-Regular",
+  ),
+ )
+);

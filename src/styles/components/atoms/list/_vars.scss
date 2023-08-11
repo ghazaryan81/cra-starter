@@ -1,0 +1,8 @@
+@use "sass:map";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+
+$list: (
+ __item--margin-left: 3.9rem,
+);

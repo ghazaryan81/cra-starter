@@ -1,0 +1,112 @@
+{
+ "name": "cra-starter",
+ "version": "0.1.0",
+ "private": true,
+ "description": "Project",
+ "author": "Hayk Ghazaryan <hovhannesi.hayk.ghazaryan.81@gmail.com> (https://github.com/ghazaryan81/cra-starter.git)",
+ "keywords": [
+  "project"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "git+ssh@github.com:ghazaryan81/cra-starter.git"
+ },
+ "bugs": {
+  "url": "https://github.com/ghazaryan81/cra-starter/issues/",
+  "email": "hovhannesi.hayk.ghazaryan.81@gmail.com"
+ },
+ "husky": {
+  "hooks": {
+   "pre-commit": "lint-staged"
+  }
+ },
+ "scripts": {
+  "start": "npx concurrently \"npm run data\" \"npm run run:start\" \"npm run json-to-scss\"",
+  "run:start": "react-app-rewired start -- --reset-cache",
+  "build": "npx concurrently \"npm run data\" \"npm run run:build\" \"npm run open:build\"",
+  "run:build": "react-app-rewired build -- --reset-cache",
+  "open:build": "npx http-server build",
+  "test": "react-app-rewired test -- --reset-cache",
+  "eject": "react-app-rewired eject -- --reset-cache",
+  "___________________ports-kill_______________________": "",
+  "killport": "npx kill-port --port 5173,4173,3000,8080,4001,4002,4003",
+  "___________________cleaning_______________________": "",
+  "stylelint:fix": "npm run stylelint -- --fix",
+  "stylelint": "npx stylelint 'styles/**/*{.css,.scss,.sass}'",
+  "prettier:fix": "npm run prettier -- --write",
+  "prettier": "npx prettier --config \"./.prettierrc\" --check \"**/*.{js,jsx,ts,tsx,css,scss,sass}\" --ignore-path .prettierignore",
+  "___________________data_______________________": "",
+  "data": "npx json-server -w ./data/todo-1.json -p 4001",
+  "___________________convert_______________________": "",
+  "json-to-scss": "npx nodemon --watch ./src/styles/abstracts/_variables.js --exec npm run run:json-to-scss",
+  "run:json-to-scss": "npx json-to-scss ./src/styles/abstracts/_variables.js",
+  "___________________husky_______________________": "",
+  "prepare": "husky install"
+ },
+ "lint-staged": {
+  "styles/**/*.{css,scss}": [
+   "npm run stylelint:fix"
+  ],
+  "**/*.{js,jsx,ts,tsx,css,scss}": [
+   "npm run prettier:fix"
+  ]
+ },
+ "config-overrides-path": "config-overrides.js",
+ "eslintConfig": {
+  "extends": [
+   "react-app",
+   "react-app/jest"
+  ]
+ },
+ "browserslist": {
+  "production": [
+   ">0.2%",
+   "not dead",
+   "not op_mini all"
+  ],
+  "development": [
+   "last 1 chrome version",
+   "last 1 firefox version",
+   "last 1 safari version"
+  ]
+ },
+ "devDependencies": {
+  "concurrently": "^8.2.0",
+  "husky": "^8.0.3",
+  "json-to-scss": "^1.6.2",
+  "killport": "^1.0.2",
+  "lint-staged": "^13.2.3",
+  "nodemon": "^3.0.1",
+  "prettier": "^3.0.1",
+  "react-app-rewired": "^2.2.1",
+  "stylelint": "^15.10.2",
+  "stylelint-config-rational-order": "^0.1.2",
+  "stylelint-config-recommended-scss": "^12.0.0",
+  "stylelint-order": "^6.0.3",
+  "stylelint-prettier": "^4.0.2",
+  "stylelint-scss": "^5.1.0",
+  "typescript-plugin-css-modules": "^5.0.1"
+ },
+ "dependencies": {
+  "@testing-library/jest-dom": "^5.17.0",
+  "@testing-library/react": "^13.4.0",
+  "@testing-library/user-event": "^13.5.0",
+  "@types/jest": "^27.5.2",
+  "@types/node": "^16.18.40",
+  "@types/react": "^18.2.20",
+  "@types/react-dom": "^18.2.7",
+  "bootstrap": "^5.3.1",
+  "classnames": "^2.3.2",
+  "cross-env": "^7.0.3",
+  "http-server": "^14.1.1",
+  "json-server": "^0.17.3",
+  "npm-run-all2": "^6.0.6",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-scripts": "5.0.1",
+  "reset-css": "^5.0.2",
+  "sass": "^1.65.1",
+  "typescript": "^4.9.5",
+  "web-vitals": "^2.1.4"
+ }
+}

@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "sass:string";
+@use "sass:meta";
+@use "sass:list";
+
+@use "@/styles/abstracts/variables" as *;
+
+$mw-xl-1000: map.get($variables, "layout-width", "xl-1000");
+$mw-lg-1000: map.get($variables, "layout-width", "lg-1000");
+$mw-md-1000: map.get($variables, "layout-width", "md-1000");
+$mw-sm-1000: map.get($variables, "layout-width", "sm-1000");
+$mw-xs-1000: map.get($variables, "layout-width", "xs-1000");
+
+$bp-xl-1000: map.get($variables, "break-point", "xl-1000");
+$bp-lg-1000: map.get($variables, "break-point", "lg-1000");
+$bp-md-1000: map.get($variables, "break-point", "md-1000");
+$bp-sm-1000: map.get($variables, "break-point", "sm-1000");
+$bp-xs-1000: map.get($variables, "break-point", "xs-1000");
+
+$sizes: sm, md, lg;

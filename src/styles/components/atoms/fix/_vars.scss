@@ -1,0 +1,10 @@
+@use "sass:map";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+
+$fix: (
+ max-width: map.get($variables, "layout-width", "xl-1000"),
+ padding-left: 3rem,
+ padding-right: 3rem,
+);

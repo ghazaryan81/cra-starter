@@ -1,0 +1,87 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+@use "./vars" as *;
+
+@mixin typography {
+ .t {
+  &--body--16-600-135 {
+   --local--resize-ratio: 1.4;
+   font-size: clamp(
+    calc(var(--font-size--160) * var(--global--resize-ratio) * var(--local--resize-ratio)),
+    vw(map.get($variables, "font-size", 160)),
+    var(--font-size--160)
+   );
+   font-weight: var(--font-weight--600);
+   line-height: var(--line-height--135);
+  }
+
+  &--body--16-500-135 {
+   --local--resize-ratio: 1.4;
+   font-size: clamp(
+    calc(var(--font-size--160) * var(--global--resize-ratio) * var(--local--resize-ratio)),
+    vw(map.get($variables, "font-size", 160)),
+    var(--font-size--160)
+   );
+   font-weight: var(--font-weight--500);
+   line-height: var(--line-height--135);
+  }
+
+  &--body--14-500-135 {
+   --local--resize-ratio: 1.4;
+   font-size: clamp(
+    calc(var(--font-size--140) * var(--global--resize-ratio) * var(--local--resize-ratio)),
+    vw(map.get($variables, "font-size", 140)),
+    var(--font-size--140)
+   );
+   font-weight: var(--font-weight--500);
+   line-height: var(--line-height--135);
+  }
+
+  @each $item, $val in map.get($variables, "color") {
+   &--color-#{$item} {
+    color: var(--color--#{$item});
+   }
+  }
+
+  @each $item, $val in map.get($variables, "font-size") {
+   &--fs-#{$item} {
+    --local--resize-ratio: 1.4;
+    font-size: clamp(
+     calc(var(--font-size--#{$item}) * var(--global--resize-ratio) * var(--local--resize-ratio)),
+     vw(map.get($variables, "font-size", $item)),
+     var(--font-size--#{$item})
+    );
+   }
+  }
+
+  @each $item, $val in map.get($variables, "font-weight") {
+   &--fw-#{$item} {
+    font-weight: var(--font-weight--#{$item});
+   }
+  }
+
+  @each $item, $val in map.get($variables, "line-height") {
+   &--lh-#{$item} {
+    line-height: var(--line-height--#{$item});
+   }
+  }
+
+  @each $item, $val in map.get($variables, "font-family") {
+   &--ff-#{$item} {
+    font-family: var(--font-family--#{$item});
+   }
+  }
+ }
+}
+
+@include typography;

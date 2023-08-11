@@ -1,0 +1,7 @@
+@use "@/styles/abstracts/mixins/position" as *;
+
+@mixin full-fill {
+ @include p("abs");
+ right: 0;
+ bottom: 0;
+}

@@ -1,0 +1,63 @@
+{
+ "mock": {
+  "mainNav": [
+   {
+    "id": 1,
+    "label": "Home",
+    "link": "/home"
+   },
+   {
+    "id": 2,
+    "label": "About",
+    "link": "/about"
+   },
+   {
+    "id": 3,
+    "label": "Pages",
+    "link": "/pages"
+   },
+   {
+    "id": 4,
+    "label": "Project",
+    "link": "/project"
+   },
+   {
+    "id": 5,
+    "label": "Contact",
+    "link": "/contact"
+   }
+  ],
+  "infoList": [
+   {
+    "icon": {
+     "width": "2.7rem",
+     "hash": "icon-time"
+    },
+    "txtBox": {
+     "Line1": "Mon - Sat 9.00 - 18.0022",
+     "Line2": "Sunday Closed"
+    }
+   },
+   {
+    "icon": {
+     "width": "2.7rem",
+     "hash": "icon-email"
+    },
+    "txtBox": {
+     "Line1": "Email",
+     "Line2": "contact@logistics.com"
+    }
+   },
+   {
+    "icon": {
+     "width": "2.7rem",
+     "hash": "icon-phone"
+    },
+    "txtBox": {
+     "Line1": "Call Us",
+     "Line2": "(00) 112 365 489"
+    }
+   }
+  ]
+ }
+}

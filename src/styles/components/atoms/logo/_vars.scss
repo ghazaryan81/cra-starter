@@ -1,0 +1,9 @@
+@use "sass:map";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+
+$logo: (
+ lg-max-width: 20.9078rem,
+ sm-max-width: 20.9078rem,
+);

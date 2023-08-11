@@ -1,0 +1,46 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+@use "./vars" as *;
+
+@mixin list {
+ .list {
+  @include media($bp-md-1000) {
+   @include flex-revers-y-center;
+  }
+
+  &--x {
+   display: flex;
+  }
+
+  &__it {
+   &--contact {
+    margin-left: clamp(
+     calc(var(--list--__item--margin-left) * var(--global--resize-ratio)),
+     vw(map.get($list, "__item--margin-left")),
+     var(--list--__item--margin-left)
+    );
+   }
+  }
+
+  &__it {
+   &--contact {
+    @include media($bp-md-1000) {
+     margin-bottom: 1.5rem;
+     margin-left: 0;
+    }
+   }
+  }
+ }
+}
+
+@include list;

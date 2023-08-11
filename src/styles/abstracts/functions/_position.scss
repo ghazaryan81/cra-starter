@@ -1,0 +1,9 @@
+@function position($position: rel) {
+ @if $position == rel {
+  @return relative;
+ } @else if $position == abs {
+  @return absolute;
+ } @else if $position == fix {
+  @return fixed;
+ }
+}

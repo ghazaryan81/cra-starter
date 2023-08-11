@@ -1,0 +1,9 @@
+@use "sass:map";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+
+$top-bar: (
+ min-height: 16rem,
+ bp-lg-1000__col--1--padding-y: 3rem,
+);

@@ -1,0 +1,31 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+@use "./vars" as *;
+
+@mixin info-box {
+ .info-box {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+
+  &__txt-space {
+   margin-left: clamp(
+    calc(var(--info-box--__item--margin-left) * var(--global--resize-ratio)),
+    vw(map.get($info-box, "__item--margin-left")),
+    var(--info-box--__item--margin-left)
+   );
+  }
+ }
+}
+
+@include info-box;

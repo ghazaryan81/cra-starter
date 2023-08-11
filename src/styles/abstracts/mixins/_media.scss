@@ -1,0 +1,5 @@
+@mixin media($value, $min-max: max) {
+ @media screen and ( #{$min-max}-width: $value ) {
+  @content;
+ }
+}

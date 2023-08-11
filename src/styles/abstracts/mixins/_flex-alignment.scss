@@ -1,0 +1,38 @@
+/* stylelint-disable scss/at-if-no-null */
+
+@mixin flex-xy-center($display: flex) {
+ display: $display;
+ justify-content: center;
+ align-items: center;
+}
+
+@mixin flex-y-center($display: flex) {
+ display: $display;
+ align-items: center;
+}
+
+@mixin flex-x-center($display: flex) {
+ display: $display;
+ align-content: center;
+}
+
+@mixin flex-x-end($display: flex) {
+ display: $display;
+ align-content: flex-end;
+}
+
+@mixin flex-x-between($display: flex) {
+ display: $display;
+ justify-content: space-between;
+}
+
+@mixin flex-x-between-y-center($display: flex) {
+ display: $display;
+ justify-content: space-between;
+ align-items: center;
+}
+
+@mixin flex-revers-y-center($flex-direction: column) {
+ flex-direction: $flex-direction;
+ align-items: center;
+}

@@ -1,0 +1,32 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+@use "./vars" as *;
+
+@mixin logo {
+ .logo {
+  display: inline-flex;
+
+  &__img {
+   // width: 100%;
+   max-width: clamp(
+    calc(var(--logo--lg-max-width) * var(--global--resize-ratio)),
+    vw(map.get($logo, "lg-max-width")),
+    var(--logo--lg-max-width)
+   );
+   height: auto;
+   // aspect-ratio: 1 / 1;
+  }
+ }
+}
+
+@include logo;

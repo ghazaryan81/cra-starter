@@ -1,0 +1,41 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "~reset-css/sass/reset" as *;
+// @use "~bootstrap/scss/bootstrap-grid" as *;
+
+@use "@/styles/abstracts/variables" as *;
+
+body {
+ border: solid #f00 10px;
+}
+// @use "@/styles/abstracts/variables-alias" as *;
+// @use "@/styles/abstracts/functions" as *;
+// @use "@/styles/abstracts/mixins" as *;
+// @use "@/styles/abstracts/declared-selectors" as *;
+
+// @use "@/styles/base" as *;
+
+// body {
+//  color: var(--color--blue-700);
+//  border: solid #f00 10px;
+//  background-color: var(--color--white-100);
+// }
+
+// a,
+// input,
+// button {
+//  font-family: var(--font-family-root);
+// }
+
+// input,
+// button {
+//  margin: 0;
+//  padding: 0;
+//  border: none;
+//  background: none;
+// }

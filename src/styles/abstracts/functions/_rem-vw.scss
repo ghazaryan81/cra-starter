@@ -1,0 +1,13 @@
+@use "sass:math";
+@use "sass:map";
+@use "@/styles/abstracts/functions/strip-unit" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+
+@function rem-vw($rem, $base-vw) {
+ @return #{math.div((strip-unit($rem) * 1000), strip-unit($base-vw))}vw;
+}
+
+@function vw($rem, $mw: map.get($variables, "break-point", "xl-1000")) {
+ @return #{rem-vw($rem, $mw)};
+}

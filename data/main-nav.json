@@ -1,0 +1,29 @@
+{
+ "mainNav": [
+  {
+   "id": 1,
+   "label": "Home",
+   "link": "/home"
+  },
+  {
+   "id": 2,
+   "label": "About",
+   "link": "/about"
+  },
+  {
+   "id": 3,
+   "label": "Pages",
+   "link": "/pages"
+  },
+  {
+   "id": 4,
+   "label": "Project",
+   "link": "/project"
+  },
+  {
+   "id": 5,
+   "label": "Contact",
+   "link": "/contact"
+  }
+ ]
+}

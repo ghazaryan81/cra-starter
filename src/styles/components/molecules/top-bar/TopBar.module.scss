@@ -1,0 +1,62 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+@use "./vars";
+
+@mixin top-bar {
+ .top-bar {
+  @include flex-y-center;
+  width: 100%;
+  min-height: var(--top-bar--min-height);
+  background-color: var(--color--blue-100);
+
+  &__row {
+   @include flex-x-between;
+  }
+
+  &__col {
+   &--1 {
+    text-decoration: none;
+   }
+
+   &--2 {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+   }
+  }
+ }
+
+ .top-bar {
+  @include media($bp-lg-1000) {
+   &__row {
+    @include flex-revers-y-center;
+   }
+
+   &__col {
+    &--1 {
+     padding: 3rem 0;
+    }
+
+    &--2 {
+     display: flex;
+     justify-content: center;
+     padding: 0 0 3rem;
+     gap: 1.7rem;
+    }
+   }
+  }
+ }
+}
+
+@include top-bar;

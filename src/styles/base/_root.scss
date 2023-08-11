@@ -1,0 +1,72 @@
+@use "sass:map";
+@use "sass:string";
+@use "sass:meta";
+@use "sass:list";
+
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+
+@use "@/styles/components/molecules/top-bar/vars" as top-bar;
+@use "@/styles/components/atoms/fix/vars" as fix;
+@use "@/styles/components/atoms/logo/vars" as logo;
+@use "@/styles/components/atoms/box/vars" as box;
+@use "@/styles/components/atoms/typography/vars" as typography;
+@use "@/styles/components/atoms/info-box/vars" as info-box;
+@use "@/styles/components/atoms/list/vars" as list-info;
+@use "@/styles/components/atoms/nav-bar/vars" as nav-bar;
+
+:root {
+ --font-family-root: Krub, sans-serif;
+ --font-family-headline: Rubik, sans-serif;
+
+ @each $item, $val in $variables {
+  @each $sub-item, $sub-val in $val {
+   --#{$item}--#{$sub-item}: #{$sub-val};
+  }
+
+  @if $item == "color" {
+   @each $sub-item, $sub-val in $val {
+    --#{$item}--#{$sub-item}--clean: #{str-replace(
+      str-replace(str-replace(#{$sub-val}, "rgb", ""), ")", ""),
+      "(",
+      ""
+     )};
+   }
+  }
+ }
+
+ @each $item, $val in fix.$fix {
+  --fix--#{$item}: #{$val};
+ }
+
+ @each $item, $val in top-bar.$top-bar {
+  --top-bar--#{$item}: #{$val};
+ }
+
+ @each $item, $val in logo.$logo {
+  --logo--#{$item}: #{$val};
+ }
+
+ @each $item, $val in box.$box {
+  --box--#{$item}: #{$val};
+ }
+
+ @each $item, $val in typography.$typography {
+  --typography--#{$item}: #{$val};
+ }
+
+ @each $item, $val in info-box.$info-box {
+  --info-box--#{$item}: #{$val};
+ }
+
+ @each $item, $val in list-info.$list {
+  --list--#{$item}: #{$val};
+ }
+
+ @each $item, $val in nav-bar.$nav-bar {
+  --nav-bar--#{$item}: #{$val};
+ }
+ font-family: var(--font-family-root);
+ font-size: var(--global--font-size-reduce);
+}

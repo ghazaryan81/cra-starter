@@ -1,0 +1,20 @@
+@use "sass:map";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+
+$box: (
+ sm--width: 4.354rem,
+ md--width: 6.3rem,
+ lg--width: 7.285rem,
+ trans-ease: map.get($variables, "ease", 100),
+ trans-duration: map.get($variables, "duration", 200),
+ brand-1-flat--color: map.get($variables, "color", "yellow-200"),
+ brand-1-flat--bg-color: map.get($variables, "color", "blue-300"),
+ brand-1-flat--border-color: map.get($variables, "color", "blue-500"),
+ brand-2-grad--bg-color: map.get($variables, "gradient", "yellow-300"),
+ brand-1-flat-hover-1-hover--color: map.get($variables, "color", "blue-100"),
+ //
+ brand-2-grad--color: map.get($variables, "color", "black-400"),
+ brand-2-grad-hover-1-hover--color: map.get($variables, "color", "yellow-200"),
+);

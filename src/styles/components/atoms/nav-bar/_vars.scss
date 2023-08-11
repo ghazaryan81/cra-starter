@@ -1,0 +1,8 @@
+@use "sass:map";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+
+$nav-bar: (
+ sm--width: 4.354rem,
+);

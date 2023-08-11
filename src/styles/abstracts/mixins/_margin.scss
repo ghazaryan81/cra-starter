@@ -1,0 +1,13 @@
+@mixin mx($left, $right: $left) {
+ margin: {
+  right: $right;
+  left: $left;
+ }
+}
+
+@mixin my($top, $bottom: $top) {
+ margin: {
+  top: $top;
+  bottom: $bottom;
+ }
+}

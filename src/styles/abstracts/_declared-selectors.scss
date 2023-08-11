@@ -1,0 +1,112 @@
+/* stylelint-disable no-duplicate-selectors */
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/variables-alias" as *;
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.flex {
+ display: flex;
+}
+
+.flex-xy-center {
+ @include flex-xy-center;
+}
+
+.flex-xy-center {
+ @include flex-xy-center;
+}
+
+.flex-y-center {
+ @include flex-y-center;
+}
+
+.flex-x-center {
+ @include flex-x-center;
+}
+
+.flex-x-end {
+ @include flex-x-end;
+}
+
+.flex-x-between {
+ @include flex-x-between;
+}
+
+.flex-x-between-y-center {
+ @include flex-x-between-y-center;
+}
+
+.flex-revers-y-center {
+ @include flex-revers-y-center;
+}
+
+.icon-width {
+ &-35 {
+  @include wh(35%, auto);
+ }
+
+ &-40 {
+  @include wh(40%, auto);
+ }
+
+ &-45 {
+  @include wh(45%, auto);
+ }
+
+ &-50 {
+  @include wh(50%, auto);
+ }
+}
+
+@each $item, $val in map.get($variables, "color") {
+ .color--#{$item} {
+  color: var(--color--#{$item});
+ }
+}
+
+@each $item, $val in map.get($variables, "font-weight") {
+ .fw--#{$item} {
+  font-weight: var(--font-weight--#{$item});
+ }
+}
+
+@each $item, $val in map.get($variables, "line-height") {
+ .lh--#{$item} {
+  line-height: var(--line-height--#{$item});
+ }
+}
+
+@each $item, $val in map.get($variables, "font-family") {
+ .ff--#{$item} {
+  font-family: var(--font-family--#{$item});
+ }
+}
+
+@each $item, $val in map.get($variables, "font-size") {
+ .fs--#{$item} {
+  --local--resize-ratio: 1.4;
+  font-size: clamp(
+   calc(var(--font-size--#{$item}) * var(--global--resize-ratio) * var(--local--resize-ratio)),
+   vw(map.get($variables, "font-size", $item)),
+   var(--font-size--#{$item})
+  );
+ }
+}
+
+.sprite-icon {
+ aspect-ratio: 1 / 1;
+}
+
+.body-ff {
+ font-family: var(--font-family-root);
+}
+
+.h-ff {
+ font-family: var(--font-family-headline);
+}
