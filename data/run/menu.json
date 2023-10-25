@@ -1,0 +1,34 @@
+{
+ "menu": [
+  {
+   "id": 0,
+   "label": "Home",
+   "slug": "home"
+  },
+  {
+   "id": 1,
+   "label": "ToDo",
+   "slug": "todo"
+  },
+  {
+   "id": 2,
+   "label": "Products",
+   "slug": "products"
+  },
+  {
+   "id": 3,
+   "label": "Users",
+   "slug": "users"
+  },
+  {
+   "id": 4,
+   "label": "Blog",
+   "slug": "blog"
+  },
+  {
+   "id": 5,
+   "label": "Weather",
+   "slug": "weather"
+  }
+ ]
+}

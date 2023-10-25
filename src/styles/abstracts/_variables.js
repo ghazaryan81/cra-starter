@@ -169,7 +169,8 @@ module.exports = {
 
  // prettier-ignore
  "global": {
-  "font-size-reduce": "62.5%",
+  // "font-size-reduce": "62.5%",
+  "font-size-reduce": "100%",
   "min-width":        "200px",
   "resize-ratio":     "0.6",
  },

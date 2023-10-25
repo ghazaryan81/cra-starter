@@ -1,0 +1,16 @@
+{
+ "cat": [
+  {
+   "id": 0,
+   "title": "Blog"
+  },
+  {
+   "id": 1,
+   "title": "ToDo"
+  },
+  {
+   "id": 2,
+   "title": "Weather"
+  }
+ ]
+}

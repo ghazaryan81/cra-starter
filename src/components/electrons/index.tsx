@@ -1,6 +1,9 @@
 export { CoreUI } from "./CoreUI";
 export type { CoreUIProps } from "./CoreUI";
 
+// export { Th } from "./Th";
+// export type { ThProps } from "./Th";
+
 export { A } from "./A";
 export type { AProps } from "./A";
 
@@ -70,9 +73,6 @@ export type { LiProps } from "./Li";
 export { Main } from "./Main";
 export type { MainProps } from "./Main";
 
-export { Nav } from "./Nav";
-export type { NavProps } from "./Nav";
-
 export { P } from "./P";
 export type { PProps } from "./P";
 
@@ -88,6 +88,12 @@ export type { StrongProps } from "./Strong";
 export { Svg } from "./Svg";
 export type { SvgProps } from "./Svg";
 
+export { Table } from "./Table";
+export type { TableProps } from "./Table";
+
+export { Thead } from "./Thead";
+export type { TheadProps } from "./Thead";
+
 export { Tbody } from "./Tbody";
 export type { TbodyProps } from "./Tbody";
 
@@ -96,9 +102,6 @@ export type { TdProps } from "./Td";
 
 export { Tfoot } from "./Tfoot";
 export type { TfootProps } from "./Tfoot";
-
-export { Thead } from "./Thead";
-export type { TheadProps } from "./Thead";
 
 export { Tr } from "./Tr";
 export type { TrProps } from "./Tr";
@@ -111,3 +114,15 @@ export type { UlProps } from "./Ul";
 
 export { Use } from "./Use";
 export type { UseProps } from "./Use";
+
+export { Label } from "./Label";
+export type { LabelProps } from "./Label";
+
+export { Aside } from "./Aside";
+export type { AsideProps } from "./Aside";
+
+export { Nav } from "./Nav";
+export type { NavProps } from "./Nav";
+
+export { Small } from "./Small";
+export type { SmallProps } from "./Small";

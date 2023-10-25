@@ -17,6 +17,7 @@
   "jsx": "react-jsx",
   "plugins": [{ "name": "typescript-plugin-css-modules" }],
   "baseUrl": "./src",
+
   "paths": {
    "@/*": ["src/*"],
    "@/components/*": ["components/*"],
@@ -24,5 +25,5 @@
   }
  },
  "include": ["src", "src/global.d.ts"],
- "exclude": ["node_modules", "build", "config-overrides.js"]
+ "exclude": ["./src/**/*.spec.ts", "node_modules", "build", "config-overrides.js"]
 }
